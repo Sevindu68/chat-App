@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { over } from "stompjs";
 import SockJS from "sockjs-client";
+import { FaUserCircle } from "react-icons/fa";
+import { RiChatSmile3Line } from "react-icons/ri";
+
+
 
 let stompClient = null;
 const ChatRoom = () => {
@@ -142,7 +146,7 @@ const ChatRoom = () => {
                   className={`member ${tab === name && "active"}`}
                   key={index}
                 >
-                  {name}
+                 <FaUserCircle /> {name}
                 </li>
               ))}
             </ul>
@@ -215,7 +219,7 @@ const ChatRoom = () => {
           )}
         </div>
       ) : ( <div>
-        <h1 className="topic">WELCOME TO CHATTY</h1>
+        <h1 className="topic"><RiChatSmile3Line className="icon" />WELCOME TO CHATTY</h1>
         <div className="register">
            
           <input
